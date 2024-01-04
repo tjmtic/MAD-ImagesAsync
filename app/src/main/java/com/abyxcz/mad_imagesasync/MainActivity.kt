@@ -18,6 +18,10 @@ import coil.compose.rememberAsyncImagePainter
 import com.abyxcz.mad_imagesasync.ui.theme.MADImagesAsyncTheme
 
 class MainActivity : ComponentActivity() {
+
+    companion object {
+        const val IMAGE_URL = "https://images.app.goo.gl/98jZo7Gv7hoKAzpi8"
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -27,7 +31,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colorScheme.background
                 ) {
-                    Greeting("Android")
+                    DisplayImageFromUrl(imageUrl = IMAGE_URL)
                 }
             }
         }
